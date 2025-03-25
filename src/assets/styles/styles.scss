@@ -1,0 +1,58 @@
+@import "fonts";
+@import "main";
+@import "mixins";
+@import "tailwind";
+@import "print";
+
+
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3,
+.line-clamp-4,
+.line-clamp-5,
+.line-clamp-6 {
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+.line-clamp-4 {
+  -webkit-line-clamp: 4;
+}
+.line-clamp-5 {
+  -webkit-line-clamp: 5;
+}
+.line-clamp-6 {
+  -webkit-line-clamp: 6;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.el-select__input {
+  border: none !important;
+  outline: none !important;
+  outline-offset: 0 !important;
+  width: auto !important;
+  --tw-ring-color: #fff00 !important;
+  padding: 0 !important;
+  font-size: 14rem !important;
+}
+

@@ -1,0 +1,38 @@
+@media print {
+  .col-span-3 {
+    display: none;
+  }
+
+  .header-height {
+    display: none;
+  }
+
+  .col-span-9 {
+    grid-column-start: span 12;
+    grid-column-end: span 12;
+  }
+  .relative.overflow-hidden{
+  display: none;
+}
+  .container {
+    padding-top: 32rem;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .display-none-print {
+    display: none;
+  }
+}
+
+
+//@media ( prefers-color-scheme: dark ) {
+//  .favicon
+//{
+//  path {
+//    fill: red;
+//  }
+//}
+//}

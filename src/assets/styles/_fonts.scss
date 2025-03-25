@@ -1,0 +1,22 @@
+//!<Подключаем шрифты>======================================================================================
+// Convert fonts: https://transfonter.org/
+// font-weight:100-thin,200-UltraLite,300-light,400-normal-regular,500-medium,600-semibold,700-bold,800-Heavy,900-black
+//&display=swap&subset=cyrillic-ext
+//!</Подключаем шрифты>=====================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@mixin font($font_name, $file_name, $weight, $style: normal) {
+  @font-face {
+    font-family: "#{$font_name}";
+    font-weight: #{$weight};
+    font-style: #{$style};
+    font-display: swap;
+    src: url("@/static/fonts/#{$file_name}.woff") format("woff");
+  }
+}
+
+@include font("Minion 3", "Minion3-Bold", 700);
+@include font("Minion 3", "Minion3-Italic", 700, italic);
+// @include font("Minion 3", "Minion 3 Extrabold", 800);
+@include font("Minion 3", "Minion3-Regular", 400);
+@include font("Minion 3", "Minion3-Semibold", 600);

@@ -1,0 +1,18 @@
+$maxWidth: 1440;
+@mixin adaptiv($type, $pcSize, $mobSize, $important: false) {
+	$value: calc(
+		#{$mobSize + px} + #{$pcSize - $mobSize} *
+			((100vw - 320px) / #{$maxWidth - 320})
+	);
+	@if $important == false {
+		#{$type}: $pcSize + px;
+		@media (max-width: #{$maxWidth + px}) {
+			#{$type}: $value;
+		}
+	} @else {
+		#{$type}: $pcSize + px !important;
+		@media (max-width: #{$maxWidth + px}) {
+			#{$type}: $value !important;
+		}
+	}
+}
